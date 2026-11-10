@@ -7,25 +7,58 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="perfil">
         <img src="img/Anna.jpg" alt="Anna">
-        <h1 id="nome">Anna Cristina Santana</h1>
+        <h1 id="perfilNome">Anna Cristina Santana</h1>
          <button id="editar">Editar Perfil</button>
         <button id="sair">Sair</button>
-        <h3>Cursando Desenvolvimento de Sistemas</h3>
-        <p>Email:<a href="mailto:annasantana7876@gmail.com">
-        annasantana7876@gmail.com</a></p>
-        <p id="telefone">Telefone:(62) 99463940</p>
-        <p id="cidade">Cidade:Anápolis</p>
+        <h3 id="perfilCurso">Cursando Desenvolvimento de Sistemas</h3>
+        <p>Email: <span id="perfilEmail">annasantana7876@gmail.com</span></p>
+        <p>Telefone: <span id="perfilTelefone">Telefone:(62) 99463940</span></p>
+        <p>Cidade: <span id="perfilCidade">Cidade:Anápolis</span></p>
     <div class="Experiencia">
         <h2>Experiência Profissional</h2>
         <h3>Função:Aluna de TI</h3>
-        <p>Estudante do Curso de Desenvolvimento de Sistemas no Colégio Herta Layser.</p>
+        <p id="perfilDescricao">Estudante do Curso de Desenvolvimento de Sistemas no Colégio Herta Layser.</p>
         <p>Ano 2025</p>
         <h3>Formação Acadêmica</h3>
         <p>Em andamento no curso de TI</p>
         <p>Ano 2026</p>
     </div>
-    <script src="js/perfil/perfil.js"></script>
+
+    <div class="formulario"id="areaFormular"hidden>
+            <h2>Editar Perfil</h2>
+            <form id="formPerfil">
+
+                <label for="nome">Nome:</label>
+                <input type="text"id="nome" required>
+
+                <label for="curso">Curso:</label>
+                <input type="text" id="curso" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" required>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" required>
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" required>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao"></textarea>
+
+                <button type="submit">
+                    Salvar Perfil
+                </button>
+
+                <button type="button" id="cancelar">
+                    Cancelar
+                </button>
+
+            </form>    
+    </div>
+
+    <script src="js/perfil/perfil.js" defer></script>
 </body>
 </html>
